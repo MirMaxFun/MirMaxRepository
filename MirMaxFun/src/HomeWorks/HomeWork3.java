@@ -1,4 +1,4 @@
-package org.future.code.homework;
+package HomeWorks;
 
 import java.net.SocketException;
 import java.nio.file.AccessDeniedException;
