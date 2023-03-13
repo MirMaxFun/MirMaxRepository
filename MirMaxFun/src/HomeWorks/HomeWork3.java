@@ -43,13 +43,31 @@ public class  HomeWork3 {
      *          для ExportException вернуть строку "ExportException"
      */
 
-    public static void raiseException(Integer exceptionId) throws Exception { // Подсказка: throws Exception в итоге надо поменять на перечисление имен исключений
-        // Напиши свой код тут для задания 1
-        throw new Exception();
+    public static void raiseException(Integer exceptionId) throws Exception {
+        String x = "Заглушка";
+        if (exceptionId == 1) throw new SocketException();
+        if (exceptionId == 2) throw new ClassNotFoundException();
+        if (exceptionId == 3) throw new AccessDeniedException(x);
+        if (exceptionId == 4) throw new ExportException(x);
+
     }
 
     public static String catchException(Integer integer) {
-        // Напиши свой код тут для задания 2
+        try {
+            raiseException(integer);
+        } catch (SocketException e) {
+            System.out.println("SocketException");
+            return "SocketException";
+        } catch (ClassNotFoundException e){
+            System.out.println("ClassNotFoundException");
+            return "ClassNotFoundException";
+        } catch (AccessDeniedException e) {
+            System.out.println("AccessDeniedException");
+            return "AccessDeniedException";
+        } catch (Exception e){
+            System.out.println("ExportException");
+            return "ExportException";
+        }
         return "Exception";
     }
 
