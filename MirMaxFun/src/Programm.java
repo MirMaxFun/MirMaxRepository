@@ -94,17 +94,17 @@ public class Programm
 //        System.out.println(strings);
 
 
-        HashMap<Integer, String> numbers = new HashMap<>();
-        numbers.put(1, "one");
-        numbers.put(2, "two");
-        numbers.put(3, "three");
-        numbers.put(4, "four");
-        numbers.put(5, "five");
-        numbers.put(6, "six");
-        numbers.put(7, "seven");
-//        System.out.println(numbers);
-//        System.out.println(numbers.get(2));
-        numbers.remove(2);
+//        HashMap<Integer, String> numbers = new HashMap<>();
+//        numbers.put(1, "one");
+//        numbers.put(2, "two");
+//        numbers.put(3, "three");
+//        numbers.put(4, "four");
+//        numbers.put(5, "five");
+//        numbers.put(6, "six");
+//        numbers.put(7, "seven");
+////        System.out.println(numbers);
+////        System.out.println(numbers.get(2));
+//        numbers.remove(2);
 //        System.out.println(numbers);
 //        System.out.println(numbers.get(2));
 //        System.out.println(numbers.size());
@@ -123,16 +123,58 @@ public class Programm
 //        for (int key : numbers.keySet()) {
 //            System.out.println(key);
 //        }
-        for (Map.Entry<Integer, String> set : numbers.entrySet()){
-            System.out.print(set.getKey() + " " + set.getValue() + " ");
+//        for (Map.Entry<Integer, String> set : numbers.entrySet()){
+//            System.out.print(set.getKey() + " " + set.getValue() + " ");
+//        }
+
+
+
+        //public
+        //protected
+        //private
+        //(default)
+        //static
+        //finale
+        //void
+//        Animals animals = new Animals("Name");
+//        animals.eat();
+//        Cat cat = new Cat("Mosya");
+//
+//        cat.getName();
+//        cat.sayHello();
+//        Dog dog = new Dog("Doggy");
+//        dog.sayHello();
+//        cat.sayHello();
+//        dog.eat();
+//        cat.eat();
+//        cat.eat("Xuy");
+//        Animals carOrDog = new Dog("Sharik");
+//        carOrDog.sayHello();
+//        long x =10;
+//        int y = (int) x; //10
+//        System.out.println(carOrDog instanceof Animals);
+
+        ArrayList<Animals> animals = new ArrayList<>();
+        animals.add(new Dog());
+        animals.add(new Dog());
+        animals.add(new Cat());
+        animals.add(new Cat());
+        animals.add(new Cat());
+        animals.add(new Cat());
+        animals.add(new Cat());
+        animals.add(new Animals());
+        for (int i = 0; i < animals.size(); i++) {
+            System.out.println(i + " " + youACat(animals.get(i)));
         }
 
 
+    }
 
-
-
-
-
+    static boolean youACat(Animals obj) {
+        if (obj instanceof  Cat){
+            return true;
+        }
+        else return false;
 
     }
 

@@ -26,6 +26,7 @@ import java.util.function.Function;
  */
 public class  HomeWork3 {
 
+
     /**
      * Задание:
      *
